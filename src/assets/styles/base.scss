@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "./variables";
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: 0.7px;
+	background-color: $body-bg;
+}
+*
+ {
+	padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+a {
+	text-decoration: none;
+	color: unset;
+}
+button {
+	cursor: pointer;
+	border: 1px solid transparent;
+	outline: none;
+	font-family: "Roboto", sans-serif;
+	font-size: 17px;
+	transition: all 0.2s ease-in-out 0.1s;
+	font-weight: 500;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+input,
+select,
+textarea,
+.select {
+	border: 2px solid transparent;
+	outline: none;
+	font-family: "Roboto", sans-serif;
+	background-color: transparent;
+	padding: 12px 10px;
+	border-radius: 10px;
+	letter-spacing: 0.7px;
+	font-size: 17px;
+	resize: none;
+}
+.full-height {
+	height: 100%;
+}
+
+.card.full-height {
+	height: calc(100% - 30px);
+}
+
+.card__header {
+	text-transform: capitalize;
+}
+
+.card > div ~ div {
+	margin-top: 30px;
+}
+
+.card__footer {
+	text-align: center;
+	text-transform: capitalize;
+}
+.txt-center {
+	text-align: center;
+}
+.p-relative {
+	position: relative;
+}
+.p-absolute {
+	position: absolute;
+}
+.p-sticky {
+	position: -webkit-sticky;
+	position: sticky;
+}
+.p-fixed {
+	position: fixed;
+}
+.thin-shadow {
+	box-shadow: 0 0 10px rgba(230, 230, 230, 0.2) !important;
+}
+.self-flex-end {
+	align-self: flex-end !important;
+}
+.self-flex-start {
+	align-self: flex-start !important;
+}
+.text-left {
+	text-align: left !important;
+}
+.items-space-btw {
+	justify-content: space-between;
+	display: flex;
+	flex-direction: row !important;
+}
+.pointer {
+	cursor: pointer;
+}
+.user-select-none {
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hidden-all-child::-webkit-scrollbar {
+  & , *{
+		display: none;
+	}
+}
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden-all-child {
+  &, *{
+		-ms-overflow-style: none;
+  	scrollbar-width: none; /* Firefox */
+	}
+}
+.facebook-color {
+	background-color: $facebook-color;
+	text-align: center;
+	color: white;
+	&:hover {
+		background-color: $facebook-color;
+		border-color: $facebook-color;
+		color: white;
+	}
+}
+.google-color {
+	background-color: $google-color;
+	text-align: center;
+	color: white;
+
+	&:hover {
+		background-color: $google-color;
+		border-color: $google-color;
+		color: white;
+	}
+}
+
+
+
+//? =======================  COMPONENTS -- StyleArea  ==============================
+@import "./../../components/usable/Layout/layout";
+@import "./../../components/usable/Loader/loader";
+@import "./../../components/usable/Notification/notification";
+@import "./../../components/usable/Popups/popup";
+
+//? =======================  STATIC -- StyleArea  ==============================
+@import "./../../pages/site/Home/home";
